@@ -1,0 +1,14 @@
+
+This file includes some links to check out/study, that are related to the class.
+I will try to maintail the list prioritized:
+
+
+webapp2 documentation - http://webapp-improved.appspot.com/
+jinja2 documentation - http://jinja.pocoo.org/docs/
+django homepage - https://www.djangoproject.com/
+
+Python classes documentation - https://docs.python.org/2/tutorial/classes.html
+beautiful soup homepage - http://www.crummy.com/software/BeautifulSoup/
+
+
+
