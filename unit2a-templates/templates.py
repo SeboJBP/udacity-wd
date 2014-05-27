@@ -36,8 +36,11 @@ class Handler(webapp2.RequestHandler):
 
 class MainPage(Handler):
     def get(self):
-        self.render("shopping_list.html")
-        
+        n=self.request.get("n")
+        if n:
+            n = int(n)
+        self.render("shopping_list.html", n=n)
+
 
         # output = form_html
         # output_hidden = ""
@@ -56,7 +59,14 @@ class MainPage(Handler):
 
         # self.write(output)
 
+class FizzBuzzHandler(Handler):
+    def get(self):
+        n = self.request.get("n")
+        n = n and int(n)  # this is nice syntactic sugar
+        self.render('fizzbuzz.html', n = n)
+
 app = webapp2.WSGIApplication([
-    ('/', MainPage)], 
+    ('/', MainPage),
+    ('/fizzbuzz', FizzBuzzHandler)], 
     debug=True)
 
